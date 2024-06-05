@@ -17,7 +17,12 @@ Feature: Test the login functionality
     | ali | Adm1n |
     Then Show error message of to be write correctly email
 
-  Scenario: To login with invalid username and invalid password
+ Scenario Outline: To login with invalid username and invalid password
     Given User open the website and go to login page
-    When User fill invalid username as "admin" and invalid "password" in login page and click on login button
+    When User fill invalid username as "<username>" and invalid "<password>" in login page and click on login button
     Then Show error message of to be write correctly email and password
+
+   Examples:
+     |  username  |  password  |
+     |  admin     |  P@$$w0rd  |
+     |  user      |  user1234  |
