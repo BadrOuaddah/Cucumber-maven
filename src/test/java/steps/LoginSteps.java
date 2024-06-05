@@ -15,7 +15,7 @@ public class LoginSteps {
 
     @When("User fill username and password in login page and click on login button")
     public void user_fill_username_and_password_in_login_page_and_click_on_login_button() {
-
+        System.out.println("Step 1");
     }
 
     @Then("User should navigate to home page")
@@ -25,7 +25,8 @@ public class LoginSteps {
 
     @When("User fill username as {string} and invalid {string} in login page and click on login button")
     public void user_fill_username_and_invalid_password_in_login_page_and_click_on_login_button(String username, String password) {
-
+        System.out.println("Step 2");
+        System.out.println("The value of username and password are : " + username + " & " + password);
     }
 
     @Then("Show an error message of password to user and stay in login page")
@@ -35,12 +36,13 @@ public class LoginSteps {
 
     @When("User fill username without @ and password in login page and click on login button")
     public void user_fill_username_without_and_password_in_login_page_and_click_on_login_button(DataTable table) {
+        System.out.println("Step 3");
         String value_1_of_table_1 = table.cell(0, 0);
         String value_2_of_table_1 = table.cell(0, 1);
         String value_1_of_table_2 = table.cell(1, 0);
         String value_2_of_table_2 = table.cell(1, 1);
-        System.out.print("In 1th table the value of username is " + value_1_of_table_1 + " and the value of password is " + value_2_of_table_1 + "\n");
-        System.out.print("In 2nd table the value of username is " + value_1_of_table_2 + " and the value of password is " + value_2_of_table_2);
+        System.out.println("In 1th table the value of username is " + value_1_of_table_1 + " and the value of password is " + value_2_of_table_1);
+        System.out.println("In 2nd table the value of username is " + value_1_of_table_2 + " and the value of password is " + value_2_of_table_2);
     }
 
     @Then("Show error message of to be write correctly email")
@@ -50,7 +52,9 @@ public class LoginSteps {
 
     @When("User fill invalid username as {string} and invalid {string} in login page and click on login button")
     public void user_fill_invalid_username_and_invalid_password_in_login_page_and_click_on_login_button(String username, String password) {
-
+        System.out.println("Step 4");
+        System.out.println("The value of username in Scenario Outline is : "+username);
+        System.out.println("The value of password in Scenario Outline is : "+password);
     }
 
     @Then("Show error message of to be write correctly email and password")
