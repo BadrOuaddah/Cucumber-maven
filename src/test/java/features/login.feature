@@ -5,6 +5,7 @@ Feature: Test the login functionality
     When User fill username and password in login page and click on login button
     Then User should navigate to home page
 
+  @Tag
   Scenario: To login with valid username and invalid password
     Given User open the website and go to login page
     When User fill username as "admin" and invalid "password" in login page and click on login button
