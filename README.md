@@ -7,6 +7,7 @@ This is a simple example of java ☕ with maven and Cucumber 🥒
 - Java 17
 - Maven 4.0.0
 - Cucumber 7.10.1
+- cucumber-java and cucumber-junit
 
 ## Dependencies in pom.xml
 
